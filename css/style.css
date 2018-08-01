@@ -1,10 +1,14 @@
+
 h1#heading {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: #533B4D;
-}
+    color: #533B4D
+} 
 
 .questions {
+    text-align: center;
     background-color: #FAA4BD;
     font-family: fantasy;
+    border: 4px double #533B4D;;
+    border-radius: 15px;
 }
