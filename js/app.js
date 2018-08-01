@@ -1,5 +1,6 @@
 'use strict';
 
+//Question 1 on food
 var question1 =
   'Are churros Christina\'s favorite nostalgic food indulgence? Type \'yes\' or \'no\'';
 var question1Response = prompt(question1);
@@ -20,6 +21,7 @@ function answer1() {
 
 answer1();
 
+//Question 2 about superhero name
 var question2 =
   'Does Christina think her superhero name would be Telepathina? Type \'yes\' or \'no\'';
 var question2Response = prompt(question2);
@@ -38,6 +40,7 @@ function answer2() {
 
 answer2();
 
+//Question 3 about moving to Seattle
 var question3 =
   'Did Christina move to Seattle because of Anthony Bourdain? Type \'yes\' or \'no\'';
 var question3Response = prompt(question3);
@@ -60,6 +63,7 @@ function answer3() {
 
 answer3();
 
+//Question 4 about ostrich bite
 var question4 = 'Was Christina ever bitten by an ostrich? Type \'yes\' or \'no\'';
 var question4Response = prompt(question4);
 console.log('Question 4: Question about ostrich bite');
@@ -80,6 +84,7 @@ function answer4() {
 
 answer4();
 
+//Question 5 about European tour
 var question5 =
   'Did Christina perform on a European tour when she was a child? Type \'yes\' or \'no\'';
 var question5Response = prompt(question5);
