@@ -73,7 +73,7 @@ function answer4() {
   }
   if (question4Response.toLowerCase() === 'yes') {
     alert(
-      'YES, you\'re right. It was just too tempting not to stick her finger into the fence that contained the Ostriches at Marineland.'
+      'YES, you\'re right. It was just too tempting not to stick her finger into the fence that contained the ostriches at Marineland.'
     );
   } else {
     alert(
@@ -105,3 +105,28 @@ function answer5() {
 }
 
 answer5();
+
+//Question 6 about guessing number game
+//Guessing game prompt with console log
+var question6 =
+  'How many times do you think Christina has moved in the past 5 years (enter a number between 0 to 10):';
+console.log('Question 6: Guessing game');
+
+//User gets 4 attempts to guess number correctly with countdown to remaining attempts
+var correctAnswer = 6;
+
+for (var i = 1; i < 5; i++) {
+  var question6Response = prompt(question6);
+  if (question6Response === correctAnswer) {
+    alert(
+      'Great guess! She\'s TIRED of moving and deciding to settle down for awhile!'
+    );
+    break;//exit from loop
+  } else if (question6Response > correctAnswer && question6Response <= 10) {
+    alert('Your guess was too high, you get ' + (4-i) + ' more attempts.');
+  } else if (question6Response < correctAnswer && question6Response >= 0) {
+    alert('Your guess was too low, you get ' + (4-i) + ' more attempts.');
+  } else {
+    alert('Invalid entry, please input a number between 0 to 10.');
+  }
+}
