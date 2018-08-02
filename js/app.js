@@ -1,4 +1,5 @@
 'use strict';
+/*
 
 //Question 1 on food
 var question1 =
@@ -105,28 +106,86 @@ function answer5() {
 }
 
 answer5();
-
+*/
 //Question 6 about guessing number game
 //Guessing game prompt with console log
 var question6 =
   'How many times do you think Christina has moved in the past 5 years (enter a number between 0 to 10):';
-console.log('Question 6: Guessing game');
+console.log('Question 6: Number guessing game');
 
 //User gets 4 attempts to guess number correctly with countdown to remaining attempts
 var correctAnswer = 6;
 
 for (var i = 1; i < 5; i++) {
-  var question6Response = prompt(question6);
+  var question6Response = parseInt(prompt(question6));
   if (question6Response === correctAnswer) {
     alert(
       'Great guess! She\'s TIRED of moving and deciding to settle down for awhile!'
     );
-    break;//exit from loop
+    break; //exit from loop
   } else if (question6Response > correctAnswer && question6Response <= 10) {
-    alert('Your guess was too high, you get ' + (4-i) + ' more attempts.');
+    alert('Your guess was too high, you get ' + (4 - i) + ' more attempts.');
   } else if (question6Response < correctAnswer && question6Response >= 0) {
-    alert('Your guess was too low, you get ' + (4-i) + ' more attempts.');
+    alert('Your guess was too low, you get ' + (4 - i) + ' more attempts.');
   } else {
     alert('Invalid entry, please input a number between 0 to 10.');
   }
+}
+
+//Question 7 about guessing game-- countries visited
+//Guessing game is prompted and logged on console
+
+var question7 =
+  'Try to guess some countries that Christina has visited (You get 6 attempts!)';
+console.log('Question 7: Countries visited guessing game');
+var question7Response = prompt(question7);
+var countryName = [
+  'Argentina',
+  'Bahamas',
+  'Belgium',
+  'Cuba',
+  'France',
+  'Germany',
+  'Iceland',
+  'Indonesia',
+  'Netherlands',
+  'Malaysia',
+  'Mexico',
+  'Philippines',
+  'Singapore',
+  'South Korea',
+  'Thailand',
+  'Uruguay'
+];
+
+// 1. see if the response matches any of the above countries in countryName array
+// 2. if response matches countyName, then alert success
+// 3. if response incorrect, then attempt again (total 6 attempts). Repeat back to step 1 ie. loop
+// 4. Alert game over. List out countries.
+var won = false;
+
+for (var j = 0; j < 6; j++) {
+  for (var k = 0; k <= countryName.length; k++) {
+    if (question7Response === countryName[k]) {
+      alert(
+        'Great guess! She\'s been to ' +
+          countryName.length +
+          ' countries. The countries are: ' +
+          countryName.toString()
+      );
+      won = true;
+      break;
+    }
+  }
+  //if won, then break
+  if (won) {
+    break;
+  }
+
+  alert(
+    question7Response +
+      ' is incorrect. Try again! You get ' +
+      (5 - j) +
+      ' more attempts to guess.'
+  );
 }
