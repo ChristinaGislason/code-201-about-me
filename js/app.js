@@ -1,5 +1,8 @@
 'use strict'; // highlights any mistakes made with variables
-/*
+
+var userScore = 0;
+var firstMessage = 'Welcome! Please enter your name:';
+var userName = prompt(firstMessage);
 
 //Question 1 on food
 var question1 =
@@ -10,11 +13,12 @@ function answer1() {
   if (question1Response === null) {
     return;
   }
-
+  userScore += 1;
   if (question1Response.toLowerCase() === 'yes') {
     alert(
       'Correct, she was born in Buenos Aires, Argentina where they are a sweet treat. She ate a bajillion of them!'
     );
+    userScore = userScore + 1; 
   } else {
     alert('Awww, incorrect! This is in fact true-- Churros are amazing!!');
   }
@@ -34,6 +38,7 @@ function answer2() {
   }
   if (question2Response.toLowerCase() === 'yes') {
     alert('HECKS YES! You\'re right.');
+    userScore += 1;
   } else {
     alert('Awww wrong answer! She IS Telepathina.');
   }
@@ -55,6 +60,7 @@ function answer3() {
     alert(
       'You got it right! She almost settled in upstate NY, but then watched the Seattle episode of \'The Layover\' and a month later moved there.'
     );
+    userScore += 1;
   } else {
     alert(
       'That\'s incorrect. She almost settled in upstate NY, but then watched the Seattle episode of \'The Layover\' and a month later moved there!'
@@ -76,6 +82,7 @@ function answer4() {
     alert(
       'YES, you\'re right. It was just too tempting not to stick her finger into the fence that contained the ostriches at Marineland.'
     );
+    userScore += 1;
   } else {
     alert(
       'That\'s incorrect. She was in fact bitten! It was mostly a stupid mistake.'
@@ -98,6 +105,7 @@ function answer5() {
     alert(
       'Nope, sorry! However, she did play cello when she was a teenager and toured with her orchestra!'
     );
+    userScore += 1;
   } else {
     alert(
       'You\'re right! It was when she was a teenager that she toured Europe with her orchestra.'
@@ -106,7 +114,7 @@ function answer5() {
 }
 
 answer5();
-*/
+
 //Question 6 about guessing number game
 //Guessing game prompt with console log
 var question6 =
@@ -122,6 +130,7 @@ for (var i = 1; i < 5; i++) {
     alert(
       'Great guess! She\'s TIRED of moving and deciding to settle down for awhile!'
     );
+    userScore += 1;
     break; //exit from loop
   } else if (question6Response > correctAnswer && question6Response <= 10) {
     alert('Your guess was too high, you get ' + (4 - i) + ' more attempts.');
@@ -173,6 +182,7 @@ for (var j = 0; j < 6; j++) {
           ' countries. The countries are: ' +
           countryName.toString()
       );
+      userScore += 1;
       correctAnswer = true;
       break;
     }
@@ -190,6 +200,12 @@ for (var j = 0; j < 6; j++) {
   );
 }
 
+//keep tally on total number of correct answers
+//prompt message that includes user name and correct number of answers
 
-//final score
-//global arrays
+var scoreMessage = userName + ' , you answered ' + userScore + ' of the questions correctly!' 
+prompt(scoreMessage);
+
+
+
+
