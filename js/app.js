@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // highlights any mistakes made with variables
 /*
 
 //Question 1 on food
@@ -162,7 +162,7 @@ var countryName = [
 // 2. if response matches countyName, then alert success
 // 3. if response incorrect, then attempt again (total 6 attempts). Repeat back to step 1 ie. loop
 // 4. Alert game over. List out countries.
-var won = false;
+var correctAnswer = false;
 
 for (var j = 0; j < 6; j++) {
   for (var k = 0; k <= countryName.length; k++) {
@@ -173,12 +173,12 @@ for (var j = 0; j < 6; j++) {
           ' countries. The countries are: ' +
           countryName.toString()
       );
-      won = true;
+      correctAnswer = true;
       break;
     }
   }
   //if won, then break
-  if (won) {
+  if (correctAnswer) {
     break;
   }
 
@@ -189,3 +189,7 @@ for (var j = 0; j < 6; j++) {
       ' more attempts to guess.'
   );
 }
+
+
+//final score
+//global arrays
