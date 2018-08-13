@@ -1,27 +1,28 @@
 body {
-    background-color: #FAA4BD;
-    font-family: fantasy;
+  background-color: #FAA4BD;
+  font-family: fantasy;
 }
 
 h1#heading {
-    text-align: center;
-    font-weight: bolder;
-    font-size: 40px;
-    color: #533B4D;
-    border: 5px dotted rgb(0,0,0);
-    padding: 20px;
-    margin: 100px 200px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 40px;
+  color: #533B4D;
+  border: 5px dotted rgb(0,0,0);
+  padding: 20px;
+  margin: 100px 200px;
 } 
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
+
 article {
-    margin: 0px auto;
-    text-align: center;
-    font-family: monospace;
-    width: 50%;
-    border: 4px double #533B4D;;
-    border-radius: 15px;
-    background-color: rbg(255,60,30);
+  margin: 0px auto;
+  text-align: center;
+  font-family: monospace;
+  width: 50%;
+  border: 4px double #533B4D;;
+  border-radius: 15px;
+  background-color: rbg(255,60,30);
 }
